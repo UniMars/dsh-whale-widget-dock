@@ -1,6 +1,7 @@
 # 发布到插件市场
 
-> 本文件在插件目录内，**所有命令都以工作区根目录** `DSH-development\` 为当前目录执行。
+> 本文件在插件目录内。插件目录**本身就是独立 git 仓库**（有自己的 `.git` 与 `origin`），
+> 所以提交与推送都在插件目录里做；`cd plugins\dsh-whale-widget-dock` 之后的命令都是相对它。
 
 > **当前状态（2026-11-02）**
 >
@@ -39,25 +40,34 @@ npm view dsh-whale-widget-dock version
 > 之后每次发版：改 `package.json` 的 `version` → `npm publish`。市场按 npm 版本判断更新。
 > 若账号开了 2FA，普通登录 token 不能发布，需要 npm 后台建 **granular token + Bypass 2FA**，再 `npm config set //registry.npmjs.org/:_authToken=npm_xxx`。
 
-## 2) 建 GitHub 仓库（要求：Public + 建满 ≥1 天 + `dsh-plugin` topic）
+## 2) GitHub 仓库（要求：Public + 建满 ≥1 天 + `dsh-plugin` topic）
 
-把插件子目录单独成库（保留提交历史）：
+仓库已经就绪：https://github.com/UniMars/dsh-whale-widget-dock
+插件目录即该仓库的工作副本，`origin` 已配好，提交身份已设为
+`UniMars <65664032+UniMars@users.noreply.github.com>`（GitHub 的邮箱隐私策略只接受这个身份）。
 
-```powershell
-# 在 workspace 根目录
-git subtree split -P plugins/dsh-whale-widget-dock -b plugin-only
-git push https://github.com/UniMars/dsh-whale-widget-dock.git plugin-only:main
-```
-
-首次也可以用 `gh`（已在本机安装）：
+日常同步就是一个普通 push：
 
 ```powershell
-gh repo create UniMars/dsh-whale-widget-dock --public --description "..."
-gh repo edit UniMars/dsh-whale-widget-dock --add-topic dsh-plugin
+cd plugins\dsh-whale-widget-dock
+git add -A
+git commit -m "..."
+git push
 ```
 
-> 如果 push 被拒并提示邮箱隐私：把分支上的提交作者改成
-> `UniMars <65664032+UniMars@users.noreply.github.com>` 再推。
+首次为新插件建库时（参考）：
+
+```powershell
+cd plugins\<包名>
+git init -b main
+gh repo create UniMars/<包名> --public --description "..."
+git remote add origin https://github.com/UniMars/<包名>.git
+git push -u origin main
+gh repo edit UniMars/<包名> --add-topic dsh-plugin
+```
+
+> 若 push 被拒并提示邮箱隐私：确认 `git config user.email` 是上面的 noreply 地址；
+> 已有提交若用了别的邮箱，需要重写作者邮箱后再推。
 
 ## 3) 提交收录 PR
 
