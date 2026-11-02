@@ -1,0 +1,7 @@
+# dsh-whale-widget-dock —— DSH bundle patch
+#
+# 把伴生插件插进 profile 的配置树。安装后用 `dsh plugin --profile desktop add`
+# 或直接改 profile 的 package.json dsh.profile.bundles 即可挂载。
+- insert:
+    - id: dsh-whale-widget-dock
+      name: dsh-whale-widget-dock

@@ -1,0 +1,45 @@
+{
+  "name": "dsh-whale-widget-dock",
+  "version": "0.3.1",
+  "description": "Companion plugin for dsh-whale-widget: docks the desktop pet against the right sidebar edge (flush to the sidebar's left edge when expanded, to the window's right edge when collapsed), with a toggle in the widget menu.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-whale-widget",
+    "sidebar",
+    "desktop-pet",
+    "dock",
+    "snap"
+  ],
+  "author": "UniMars",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniMars/dsh-whale-widget-dock.git"
+  },
+  "homepage": "https://github.com/UniMars/dsh-whale-widget-dock#readme",
+  "bugs": {
+    "url": "https://github.com/UniMars/dsh-whale-widget-dock/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
