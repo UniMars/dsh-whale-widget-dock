@@ -1,7 +1,7 @@
 {
   "name": "dsh-whale-widget-dock",
   "version": "0.3.0",
-  "description": "dsh-whale-widget 的伴生插件：桌宠在右侧 Sidebar 展开时紧贴其左缘、折叠时紧贴窗口右缘；开关在挂件主菜单里，可随时勾选/取消。",
+  "description": "Companion plugin for dsh-whale-widget: docks the desktop pet against the right sidebar edge (flush to the sidebar's left edge when expanded, to the window's right edge when collapsed), with a toggle in the widget menu.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -24,7 +24,19 @@
     "dock",
     "snap"
   ],
+  "author": "noctboat",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noctboat/dsh-whale-widget-dock.git"
+  },
+  "homepage": "https://github.com/noctboat/dsh-whale-widget-dock#readme",
+  "bugs": {
+    "url": "https://github.com/noctboat/dsh-whale-widget-dock/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
