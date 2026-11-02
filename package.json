@@ -1,0 +1,33 @@
+{
+  "name": "dsh-whale-widget-dock",
+  "version": "0.3.0",
+  "description": "dsh-whale-widget 的伴生插件：桌宠在右侧 Sidebar 展开时紧贴其左缘、折叠时紧贴窗口右缘；开关在挂件主菜单里，可随时勾选/取消。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-whale-widget",
+    "sidebar",
+    "desktop-pet",
+    "dock",
+    "snap"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
