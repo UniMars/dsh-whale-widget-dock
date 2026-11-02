@@ -153,7 +153,8 @@ if ($DryRun) {
 else {
     if (Test-Path -LiteralPath $TargetDir) { Remove-Item -LiteralPath $TargetDir -Recurse -Force }
     New-Item -ItemType Directory -Path $TargetDir -Force | Out-Null
-    $exclude = @('install.ps1')
+    # 安装副本保持最小：不带发布物料与测试
+    $exclude = @('install.ps1', 'publish', 'test')
     Get-ChildItem -LiteralPath $SourceDir -Force | Where-Object { $exclude -notcontains $_.Name } | ForEach-Object {
         Copy-Item -LiteralPath $_.FullName -Destination $TargetDir -Recurse -Force
     }
