@@ -9,8 +9,8 @@
 > | --- | --- |
 > | npm 发布 | ✅ `dsh-whale-widget-dock@0.3.1`（`latest`），`npm i dsh-whale-widget-dock` 已验证 |
 > | GitHub 仓库 | ✅ https://github.com/UniMars/dsh-whale-widget-dock（Public，topic `dsh-plugin`，release v0.3.1） |
-> | 收录 PR | ✅ https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/11673（1 文件 / +6 行，MERGEABLE，CI 进行中） |
-> | 市场可检索 | ⏳ 合并后约 1 天 |
+> | 收录 PR | ✅ https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/11673（1 文件 / +6 行，MERGEABLE；CI 全绿：`check` 18m47s + `Submission gate`） |
+> | 市场可检索 | ⏳ 等维护者合并，合并后约 1 天 |
 >
 > 注：GitHub 账号是 `UniMars`，npm 账号是 `noctboat`，两者不同；所有 URL 以 `UniMars` 为准。
 > 另：npm 自动为首次发布创建了 `0.0.0-stage` 占位版本，`latest` 不受影响，用 bypass-2FA token 无法删除。
