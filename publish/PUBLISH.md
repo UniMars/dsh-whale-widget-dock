@@ -3,14 +3,15 @@
 > 本文件在插件目录内。插件目录**本身就是独立 git 仓库**（有自己的 `.git` 与 `origin`），
 > 所以提交与推送都在插件目录里做；`cd plugins\dsh-whale-widget-dock` 之后的命令都是相对它。
 
-> **当前状态（2026-11-03）**
+> **当前状态（2026-11-04，已上架）**
 >
 > | 步骤 | 状态 |
 > | --- | --- |
 > | npm 发布 | ✅ `dsh-whale-widget-dock@0.3.1`（`latest`），`npm i dsh-whale-widget-dock` 已验证 |
 > | GitHub 仓库 | ✅ https://github.com/UniMars/dsh-whale-widget-dock（Public，topic `dsh-plugin`，release v0.3.1） |
-> | 收录 PR | ✅ https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/11673（1 文件 / +6 行，MERGEABLE；CI 全绿：`check` 18m47s + `Submission gate`） |
-> | 市场可检索 | ⏳ 等维护者合并，合并后约 1 天 |
+> | 收录 PR | ✅ 已合并（2026-11-03 17:07Z）：https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/11673 |
+> | 市场索引 | ✅ 条目已进入 `plugins.json` 与 Discover 索引（映射 npm `0.3.1`） |
+> | 市场页 | https://awesome-dsh-plugin.com/p/UniMars/dsh-whale-widget-dock/ |
 >
 > 注：GitHub 账号是 `UniMars`，npm 账号是 `noctboat`，两者不同；所有 URL 以 `UniMars` 为准。
 > 另：npm 自动为首次发布创建了 `0.0.0-stage` 占位版本，`latest` 不受影响，用 bypass-2FA token 无法删除。
